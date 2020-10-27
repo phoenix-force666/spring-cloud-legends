@@ -1,0 +1,12 @@
+spring:
+  flyway:
+    locations: classpath:/db
+    baseline-on-migrate: true
+    cleanDisabled: true
+mybatis-plus:
+  mapper-locations: classpath:mappers/*Mapper.xml
+legends:
+  enabled: true
+  db:
+    type: oracle
+    mapperScan: com.legends.cloud.demo.mapper*

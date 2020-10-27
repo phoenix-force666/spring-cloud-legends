@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.legends.cloud.cache.config.CacheRedisCaffeineAutoConfiguration,\
+com.legends.cloud.cache.config.HerionRedisConfig

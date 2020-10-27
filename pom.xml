@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<packaging>pom</packaging>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.2.8.RELEASE</version>
+	</parent>
+
+	<groupId>com.legends.cloud</groupId>
+	<artifactId>spring-cloud-legends</artifactId>
+	<version>1.2.6-SNAPSHOT</version>
+	<name>spring-cloud-legends</name>
+	<description>spring-cloud-legends</description>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<legends.version>1.2.6-SNAPSHOT</legends.version>
+		<!--<spring-cloud.version>Finchley.SR2</spring-cloud.version>-->
+		<spring-cloud.version>Hoxton.SR5</spring-cloud.version>
+		<swagger2.version>2.9.2</swagger2.version>
+		<fastjson.version>1.2.57</fastjson.version>
+		<logback-gelf.version>1.1.11</logback-gelf.version>
+		<apollo-client.version>1.1.0</apollo-client.version>
+		<javax.inject.version>1</javax.inject.version>
+		<jasypt-spring-boot-starter.version>2.1.0</jasypt-spring-boot-starter.version>
+		<mybatis-plus-boot-starter.version>3.4.0</mybatis-plus-boot-starter.version>
+		<lombok.version>1.16.22</lombok.version>
+		<ojdbc.version>11.2.0.1.0</ojdbc.version>
+		<druid.version>1.1.10</druid.version>
+		<mybatis-plus.version>3.4.0</mybatis-plus.version>
+		<velocity.version>1.7</velocity.version>
+		<velocity.engine.version>2.2</velocity.engine.version>
+		<beetl.version>3.1.8.RELEASE</beetl.version>
+
+		<springboot-mybatis.version>3.3.2</springboot-mybatis.version>
+
+		<commons-lang3.version>3.4</commons-lang3.version>
+		<logback-version>1.2.3</logback-version>
+		<security.version>0.4</security.version>
+		<!--<spring.initializr.version>0.7.0.RELEASE</spring.initializr.version>-->
+		<spring.initializr.version>1.1.2.SNAPSHOT</spring.initializr.version>
+		<mail.version>1.4.7</mail.version>
+		<mapstruct.version>1.3.1.Final</mapstruct.version>
+	</properties>
+
+	<modules>
+		<module>spring-cloud-legends-dependencies</module>
+		<module>spring-cloud-legends-common</module>
+		<module>spring-cloud-legends-utils</module>
+		<module>spring-cloud-legends-starters</module>
+	</modules>
+	<dependencyManagement>
+		<dependencies>
+
+			<dependency>
+				<groupId>com.legends.cloud</groupId>
+				<artifactId>spring-cloud-legends-dependencies</artifactId>
+				<version>${legends.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<!-- fastjson -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${fastjson.version}</version>
+			</dependency>
+			<!-- swagger2 -->
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger2</artifactId>
+				<version>${swagger2.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger-ui</artifactId>
+				<version>${swagger2.version}</version>
+			</dependency>
+
+			<!-- swagger-spring-boot -->
+			<dependency>
+				<groupId>com.spring4all</groupId>
+				<artifactId>swagger-spring-boot-starter</artifactId>
+				<version>1.7.0.RELEASE</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.xiaoymin</groupId>
+				<artifactId>swagger-bootstrap-ui</artifactId>
+				<version>1.8.8</version>
+			</dependency>
+
+			<!-- swagger-spring-boot -->
+			<dependency>
+				<groupId>com.github.xiaoymin</groupId>
+				<artifactId>knife4j-spring-boot-starter</artifactId>
+				<!--在引用时请在maven中央仓库搜索最新版本号-->
+				<version>2.0.2</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.pukkaone</groupId>
+				<artifactId>logback-gelf</artifactId>
+				<version>${logback-gelf.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-classic</artifactId>
+				<version>${logback-version}</version>
+			</dependency>
+
+			<!-- Apollo -->
+			<dependency>
+				<groupId>com.ctrip.framework.apollo</groupId>
+				<artifactId>apollo-client</artifactId>
+				<version>${apollo-client.version}</version>
+			</dependency>
+			<!-- javax.inject apollo -->
+			<dependency>
+				<groupId>javax.inject</groupId>
+				<artifactId>javax.inject</artifactId>
+				<version>${javax.inject.version}</version>
+			</dependency>
+			<!-- 配置加密 -->
+			<dependency>
+				<groupId>com.github.ulisesbocchio</groupId>
+				<artifactId>jasypt-spring-boot-starter</artifactId>
+				<version>${jasypt-spring-boot-starter.version}</version>
+			</dependency>
+
+			<!--mybatis -->
+			<dependency>
+				<groupId>org.mybatis.spring.boot</groupId>
+				<artifactId>mybatis-spring-boot-starter</artifactId>
+				<version>${springboot-mybatis.version}</version>
+			</dependency>
+
+			<!-- mybatis-plus -->
+			<dependency>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus</artifactId>
+				<version>${mybatis-plus.version}</version>
+			</dependency>
+
+
+			<!-- mybatis-plus starter -->
+			<dependency>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus-boot-starter</artifactId>
+				<version>${mybatis-plus-boot-starter.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus-generator</artifactId>
+				<version>${mybatis-plus.version}</version>
+			</dependency>
+
+			<!-- 模板引擎 -->
+			<dependency>
+				<groupId>org.apache.velocity</groupId>
+				<artifactId>velocity</artifactId>
+				<version>${velocity.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.velocity</groupId>
+				<artifactId>velocity-engine-core</artifactId>
+				<version>${velocity.engine.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.ibeetl</groupId>
+				<artifactId>beetl</artifactId>
+				<version>${beetl.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.freemarker</groupId>
+				<artifactId>freemarker</artifactId>
+				<version>2.3.30</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid-spring-boot-starter</artifactId>
+				<version>${druid.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.oracle</groupId>
+				<artifactId>ojdbc6</artifactId>
+				<version>${ojdbc.version}</version>
+			</dependency>
+
+
+			<!-- commons-lang3 -->
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${commons-lang3.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>23.0</version>
+			</dependency>
+
+			<!-- 加解密安全相关 start-->
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-crypto</artifactId>
+				<version>1.0.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.bouncycastle</groupId>
+				<artifactId>bcprov-jdk15on</artifactId>
+				<version>1.55</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.bouncycastle</groupId>
+				<artifactId>bcpkix-jdk15on</artifactId>
+				<version>1.55</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-codec</groupId>
+				<artifactId>commons-codec</artifactId>
+				<version>1.9</version>
+			</dependency>
+
+			<!-- 加解密安全相关 end-->
+
+
+
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+				<version>0.2.1.RELEASE</version>
+			</dependency>
+
+
+			<!-- spring initializr start-->
+			<dependency>
+				<groupId>io.spring.initializr</groupId>
+				<artifactId>initializr-web</artifactId>
+				<version>${spring.initializr.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.spring.initializr</groupId>
+				<artifactId>initializr-generator-spring</artifactId>
+				<version>${spring.initializr.version}</version>
+			</dependency>
+			<!-- spring initializr end-->
+
+
+			<!-- java mail -->
+			<dependency>
+				<groupId>javax.mail</groupId>
+				<artifactId>mail</artifactId>
+				<version>${mail.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mapstruct</groupId>
+				<artifactId>mapstruct</artifactId>
+				<version>${mapstruct.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mapstruct</groupId>
+				<artifactId>mapstruct-processor</artifactId>
+				<version>${mapstruct.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-core</artifactId>
+				<version>6.0.8</version>
+				<!--<version>6.0.8-M1</version>-->
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+	</dependencies>
+</project>

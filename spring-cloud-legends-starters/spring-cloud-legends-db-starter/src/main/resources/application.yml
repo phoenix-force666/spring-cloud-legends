@@ -1,0 +1,7 @@
+spring:
+  flyway:
+    locations: classpath:/db
+    baseline-on-migrate: true
+    cleanDisabled: true
+mybatis:
+  mapper-locations: classpath:mappers/*Mapper.xml

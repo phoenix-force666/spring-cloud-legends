@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>spring-boot-mail test</title>
+        <style>
+            body {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #welcome {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="welcome">
+            <h3>hello word</h3>
+            github：
+            <a href="#" th:href="@{${url}}" target="_bank">
+                <strong>github</strong>
+            </a>
+            <br/>
+            <img width="258px" height="258px" src="https://github.com/">
+        </div>
+    </body>
+</html>
