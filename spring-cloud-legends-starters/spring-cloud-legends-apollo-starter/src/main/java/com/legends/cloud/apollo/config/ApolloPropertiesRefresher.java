@@ -1,4 +1,4 @@
-package com.legends.cloud.web.config;
+package com.legends.cloud.apollo.config;
 
 import com.ctrip.framework.apollo.model.ConfigChangeEvent;
 import com.ctrip.framework.apollo.spring.annotation.ApolloConfigChangeListener;
@@ -29,28 +29,13 @@ public class ApolloPropertiesRefresher implements ApplicationContextAware {
 
     @ApolloConfigChangeListener
     public void onChange(ConfigChangeEvent changeEvent){
-//         boolean eurekaPropertiesChanged = false;
-//         for (String changedKey : changeEvent.changedKeys()) {
-//             if (changedKey.startsWith("eureka.")) {
-//                 log.info("===============================================================");
-//                 log.info("changedKey:{} value:{}",changedKey,changeEvent.getChange(changedKey));
-//                 ConfigChange configChange = changeEvent.getChange(changedKey);
-//                 configChange.getOldValue();
-//                 eurekaPropertiesChanged = true;
-//                 break;
-//             }
-//         }
-        refreshProperties(changeEvent);
-//        if (eurekaPropertiesChanged) {
-//            refreshEurekaProperties(changeEvent);
-//        }
+       refreshProperties(changeEvent);
     }
+
     public void refreshProperties(ConfigChangeEvent changeEvent){
         this.applicationContext.publishEvent(new EnvironmentChangeEvent(changeEvent.changedKeys()));
         refreshScope.refreshAll();
     }
-
-
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {

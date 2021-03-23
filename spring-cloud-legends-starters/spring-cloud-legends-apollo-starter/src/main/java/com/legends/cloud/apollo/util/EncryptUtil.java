@@ -1,12 +1,13 @@
-package com.legends.cloud.web.utils;
-import org.apache.commons.lang3.StringUtils;
+package com.legends.cloud.apollo.util;
 import org.jasypt.intf.cli.JasyptPBEStringDecryptionCLI;
 import org.jasypt.intf.cli.JasyptPBEStringEncryptionCLI;
+import org.springframework.util.StringUtils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 /**
  *
  * 类EncryptUtil.java的实现描述：配置加密工具
@@ -63,6 +64,7 @@ public class EncryptUtil {
      */
     private static String replaceBlank(String str) {
         String dest = "";
+
         if (!StringUtils.isEmpty(str)) {
             Matcher matcher = BLANK_PATTERN.matcher(str);
             dest = matcher.replaceAll("");

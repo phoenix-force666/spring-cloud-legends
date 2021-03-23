@@ -1,6 +1,5 @@
 package com.legends.cloud.web.config;
 
-import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -16,7 +15,6 @@ import com.legends.cloud.web.service.LegendBaseConfigService;
 @EnableConfigurationProperties(LegendsBaseProperties.class)
 @ConditionalOnClass(LegendBaseConfigService.class)
 @ConditionalOnProperty(prefix = "legends", value = "enabled", matchIfMissing = true)
-@EnableApolloConfig
 public class LegendsBaseAutoConfiguration {
 
     @Autowired

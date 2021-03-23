@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.legends.cloud.apollo.config.ApolloAotuConfig,\
+  com.legends.cloud.apollo.config.ApolloPropertiesRefresher

@@ -81,11 +81,6 @@
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
 		</dependency>
-		<!-- swagger2 -->
-		<!--<dependency>-->
-			<!--<groupId>io.springfox</groupId>-->
-			<!--<artifactId>springfox-swagger2</artifactId>-->
-		<!--</dependency>-->
 
 		<dependency>
 			<groupId>io.springfox</groupId>
@@ -106,20 +101,6 @@
 			<groupId>com.github.pukkaone</groupId>
 			<artifactId>logback-gelf</artifactId>
 		</dependency>
-		<!-- Apollo -->
-		<dependency>
-	        <groupId>com.ctrip.framework.apollo</groupId>
-	        <artifactId>apollo-client</artifactId>
-	    </dependency>
-	    <!-- javax.inject apollo -->
-		<dependency>
-		    <groupId>javax.inject</groupId>
-		    <artifactId>javax.inject</artifactId>
-		</dependency>
-	    <dependency>
-	        <groupId>com.github.ulisesbocchio</groupId>
-	        <artifactId>jasypt-spring-boot-starter</artifactId>
-	   </dependency>
 
 		<dependency>
 			<groupId>com.legends.cloud</groupId>
