@@ -28,8 +28,6 @@ import java.util.Map;
 /**
  * Freemarker 模板引擎实现文件输出
  *
- * @author nieqiurong
- * @since 2018-01-11
  */
 public class FreemarkerTemplateEngine extends AbstractTemplateEngine {
 

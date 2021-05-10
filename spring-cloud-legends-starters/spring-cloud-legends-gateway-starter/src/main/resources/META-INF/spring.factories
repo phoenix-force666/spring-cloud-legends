@@ -1,4 +1,3 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
   com.legends.cloud.gateway.config.SwaggerAutoConfig,\
-  com.legends.cloud.gateway.config.SwaggerResourceConfig,\
-  com.legends.cloud.gateway.apollo.config.ApolloPropertiesRefresher
+  com.legends.cloud.gateway.config.SwaggerResourceConfig

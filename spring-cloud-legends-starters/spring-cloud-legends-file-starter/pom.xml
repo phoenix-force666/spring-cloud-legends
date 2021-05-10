@@ -5,7 +5,7 @@
 	<parent>
 		<artifactId>spring-cloud-legends-starters</artifactId>
 		<groupId>com.legends.cloud</groupId>
-		<version>1.0.0-M1</version>
+		<version>2020.0.0-M1</version>
 	</parent>
 	<groupId>com.legends.cloud</groupId>
 	<artifactId>spring-cloud-legends-file-starter</artifactId>

@@ -1,0 +1,106 @@
+apollo:
+    bootstrap: 
+        enabled: true 
+        namespaces: application,DataCenter.public-xyd
+
+server:
+  actPath: /actuator
+  
+# feign 
+feign:  
+    hystrix:
+        enabled: true
+
+# eureka server
+eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone:
+  instance:
+    instanceId: ${spring.cloud.client.ip-address}:${server.port}
+    preferIpAddress: true
+    statusPageUrlPath: ${server.actPath}/info
+    healthCheckUrlPath: ${server.actPath}/health
+
+# ribbon
+ribbon: 
+    ConnectionTimeout: 10000 # 请求连接超时时间
+    ReadTimeout: 10000 # 请求处理超时时间
+    OkToRetryOnAllOperations: true # 请求所有都可以重试
+    MaxAutoRetriesNextServer: 1 # 允许切换实例重试次数
+    MaxAutoRetries: 1 # 同一个实例重试次数
+# spring
+spring:
+  flyway:
+    locations: classpath:/db
+    baseline-on-migrate: true
+    cleanDisabled: true
+# spring cloud 
+  cloud:
+      loadbalancer:
+          retry:
+              enabled: true # 开启重试
+  pool:
+    primary:
+      corePoolSize: 10
+      maxPoolSize: 50
+      queueCapacity: 1000
+    secondary:
+      corePoolSize: 10
+      maxPoolSize: 50
+      queueCapacity: 1000
+# async timeout
+  mvc:
+      async:
+          request-timeout: 10000
+# aop
+  aop:
+      auto: true
+#    security:
+#      user:
+#        name: xxx
+#        password: xxx
+  profiles:
+    active: dev
+      
+# legends
+legends:
+  swBasePack: '*'
+  secWhiteList: 
+    - /v2/api-docs
+    - /actuator
+    - /actuator/**
+    - /jokolia
+    - /base/**
+    - /api/**
+    - /platform/**
+    - /mng/**
+  db:
+    type: oracle
+    mapperScan: com.legends.demo.mapper*
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
+mybatis:
+  mapper-locations: classpath:mappers/*Mapper.xml
+
+management:
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+    tags:
+      application: ${spring.application.name}
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'

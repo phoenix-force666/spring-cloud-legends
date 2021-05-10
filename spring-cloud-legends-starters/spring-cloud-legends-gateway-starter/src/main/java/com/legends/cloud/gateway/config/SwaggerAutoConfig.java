@@ -1,6 +1,7 @@
 package com.legends.cloud.gateway.config;
 
 import com.legends.cloud.gateway.filter.SwaggerHeaderFilter;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,12 +13,13 @@ import org.springframework.context.annotation.Configuration;
  * @Date 2020-08-13 17:49
  */
 @Configuration(proxyBeanMethods = false)
+@Slf4j
 public class SwaggerAutoConfig {
 
     @Bean
     @ConditionalOnMissingBean
 	public SwaggerHeaderFilter SwaggerHeaderFilter(){
-		System.out.println("我初始化了");
+		log.info("我初始化了");
 		return new SwaggerHeaderFilter();
 	}
 }

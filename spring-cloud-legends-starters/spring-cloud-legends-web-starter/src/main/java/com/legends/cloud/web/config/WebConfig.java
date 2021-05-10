@@ -6,6 +6,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringBootConfiguration;
+import org.springframework.boot.web.server.WebServerFactoryCustomizer;
+import org.springframework.boot.web.servlet.server.ConfigurableServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.MediaType;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
@@ -30,28 +32,33 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
-        log.info("configureContentNegotiation-------->");
+//        log.info("configureContentNegotiation-------->");
         configurer.defaultContentType(MediaType.APPLICATION_JSON);
     }
 
 
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
-        log.info("configureDefaultServletHandling-------->");
+//        log.info("configureDefaultServletHandling-------->");
+//        configurer.enable("visit-center");
         configurer.enable();
     }
 
+    @Bean
+    public WebServerFactoryCustomizer<ConfigurableServletWebServerFactory> enableDefaultServlet() {
+        return (factory) -> factory.setRegisterDefaultServlet(true);
+    }
 
     @Override
     public void configureAsyncSupport(final AsyncSupportConfigurer configurer) {
-        log.info("configureAsyncSupport-------->");
+//        log.info("configureAsyncSupport-------->");
         configurer.registerCallableInterceptors(myCallableProcessingInterceptor());
         configurer.setTaskExecutor(primaryExecutor);
     }
 
     @Bean
     public CallableProcessingInterceptor myCallableProcessingInterceptor() {
-        log.info("myCallableProcessingInterceptor-------->");
+//        log.info("myCallableProcessingInterceptor-------->");
         return new LegendsCallableProcessingInterceptor();
     }
 }

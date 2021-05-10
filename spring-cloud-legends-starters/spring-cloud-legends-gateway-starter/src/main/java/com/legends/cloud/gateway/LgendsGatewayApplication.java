@@ -12,12 +12,6 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 @EnableCircuitBreaker
 public class LgendsGatewayApplication {
 
-//	@Bean
-//	public SwaggerHeaderFilter SwaggerHeaderFilter(){
-//		System.out.println("我初始化了");
-//		return new SwaggerHeaderFilter();
-//	}
-
 	public static void main(String[] args) {
 		SpringApplication.run(LgendsGatewayApplication.class, args);
 	}

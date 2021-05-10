@@ -72,9 +72,10 @@ public class EncryptUtil {
         return dest;
     }
 
-//    public static void main(String[] args) {
-//        String input = "jdbc:mysql://192.180.53.120:3306/finance_base_user?allowMultiQueries=true&characterEncoding=utf8&useSSL=false";
-//        System.out.println(getEncryptedParams(input, "Q0Xv57uP82Dw9oJn3"));
-//    }
+    public static void main(String[] args) {
+        String input = "herion";
+        String result=EncryptUtil.getEncryptedParams(input, "Q0Xv57uP82Dw9oJn3");
+        System.out.println("--------->"+result);
+    }
 
 }

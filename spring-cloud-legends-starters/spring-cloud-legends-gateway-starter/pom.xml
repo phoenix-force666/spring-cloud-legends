@@ -5,9 +5,9 @@
     <parent>
         <artifactId>spring-cloud-legends-starters</artifactId>
         <groupId>com.legends.cloud</groupId>
-        <version>1.0.0-M1</version>
+        <version>2020.0.0-M1</version>
     </parent>
-    <groupId>com.legends</groupId>
+    <groupId>com.legends.cloud</groupId>
     <artifactId>spring-cloud-legends-gateway-starter</artifactId>
     <name>spring-cloud-legends-gateway-starter</name>
     <description>spring-cloud-legends-gateway-starter</description>
@@ -17,7 +17,6 @@
     </properties>
 
     <dependencies>
-
         <dependency>
             <groupId>com.legends.cloud</groupId>
             <artifactId>spring-cloud-legends-common</artifactId>
@@ -30,6 +29,19 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>guava</artifactId>
+                    <groupId>com.google.guava</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <scope>compile</scope>
         </dependency>
 
         <dependency>
@@ -37,11 +49,16 @@
             <artifactId>spring-boot-actuator</artifactId>
         </dependency>
 
-        <!-- Apollo -->
         <dependency>
-            <groupId>com.ctrip.framework.apollo</groupId>
-            <artifactId>apollo-client</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
+
+        <!-- Apollo -->
+<!--        <dependency>-->
+<!--            <groupId>com.ctrip.framework.apollo</groupId>-->
+<!--            <artifactId>apollo-client</artifactId>-->
+<!--        </dependency>-->
 
         <!-- SpringCloud Hystrix 微服务容错监控组件:断路器,依赖隔离,服务降级,服务监控 依赖 -->
         <dependency>
@@ -67,7 +84,19 @@
             <artifactId>spring-integration-webflux</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+        <!-- 编写的配置文件别人引用的时候会有一定的配置 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+        </dependency>
     </dependencies>
+
+
+
 
     <build>
         <plugins>

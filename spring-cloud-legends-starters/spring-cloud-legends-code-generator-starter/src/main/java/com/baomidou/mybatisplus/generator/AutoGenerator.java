@@ -43,7 +43,6 @@ import java.util.stream.Collectors;
 /**
  * 生成文件
  *
- * @author YangHu, tangguo, hubin
  * @since 2016-08-30
  */
 @Data
