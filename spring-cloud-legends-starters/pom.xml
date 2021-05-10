@@ -22,7 +22,7 @@
         <module>spring-cloud-legends-code-generator-starter</module>
         <module>spring-cloud-legends-project-generator-starter</module>
         <module>spring-cloud-legends-zuul-starter</module>
-        <module>spring-cloud-legends-monitor-starter</module>
+<!--        <module>spring-cloud-legends-monitor-starter</module>-->
         <module>spring-cloud-legends-process-engine-starter</module>
         <module>spring-cloud-legends-elastseach-starter</module>
         <module>spring-cloud-legends-eureka-starter</module>

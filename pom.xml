@@ -309,4 +309,18 @@
 			<optional>true</optional>
 		</dependency>
 	</dependencies>
+
+	<distributionManagement>
+		<repository>
+			<id>rdc-releases</id>
+			<name>zuojiang release</name>
+			<url>http://172.19.213.137:8081/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>rdc-snapshots</id>
+			<name>zuojiang snapshots</name>
+			<url>http://172.19.213.137:8081/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 </project>
