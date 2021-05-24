@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.legends.cloud.email.config.EmailAutoConfiguration
+top.legendscloud.email.config.EmailAutoConfiguration

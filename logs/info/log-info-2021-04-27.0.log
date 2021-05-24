@@ -1,12 +1,12 @@
 2021-04-27 15:43:32.417  INFO 217548 --- [main] c.l.c.web.LegendsBaseStarterApplication  : Starting LegendsBaseStarterApplication using Java 1.8.0_211 on SUNLINE24-PC with PID 217548 (D:\open_source\spring-cloud-legends\spring-cloud-legends-starters\target\classes started by sunline24 in D:\open_source\spring-cloud-legends)
 2021-04-27 15:43:32.451  INFO 217548 --- [main] c.l.c.web.LegendsBaseStarterApplication  : The following profiles are active: dev
-2021-04-27 15:43:35.459  WARN 217548 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.legends.cloud.web.config.RestTemplateConfig]; nested exception is java.lang.IllegalStateException: Annotation @EnableCircuitBreaker found, but there are no implementations. Did you forget to include a starter?
+2021-04-27 15:43:35.459  WARN 217548 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [RestTemplateConfig]; nested exception is java.lang.IllegalStateException: Annotation @EnableCircuitBreaker found, but there are no implementations. Did you forget to include a starter?
 2021-04-27 15:43:35.537  INFO 217548 --- [main] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2021-04-27 15:43:35.617 ERROR 217548 --- [main] o.s.boot.SpringApplication               : Application run failed
 
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.legends.cloud.web.config.RestTemplateConfig]; nested exception is java.lang.IllegalStateException: Annotation @EnableCircuitBreaker found, but there are no implementations. Did you forget to include a starter?
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [RestTemplateConfig]; nested exception is java.lang.IllegalStateException: Annotation @EnableCircuitBreaker found, but there are no implementations. Did you forget to include a starter?
 	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:610)
 	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:311)
 	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250)
@@ -30,7 +30,7 @@ org.springframework.beans.factory.BeanDefinitionStoreException: Failed to proces
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
-	at com.legends.cloud.web.LegendsBaseStarterApplication.main(LegendsBaseStarterApplication.java:12)
+	at LegendsBaseStarterApplication.main(LegendsBaseStarterApplication.java:12)
 Caused by: java.lang.IllegalStateException: Annotation @EnableCircuitBreaker found, but there are no implementations. Did you forget to include a starter?
 	at org.springframework.cloud.commons.util.SpringFactoryImportSelector.selectImports(SpringFactoryImportSelector.java:77)
 	at org.springframework.context.annotation.ConfigurationClassParser$DefaultDeferredImportSelectorGroup.process(ConfigurationClassParser.java:904)
@@ -51,13 +51,13 @@ Caused by: java.lang.IllegalStateException: Annotation @EnableCircuitBreaker fou
 2021-04-27 15:44:53.132  INFO 66740 --- [main] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/jolokia' to jolokia-actuator-endpoint
 2021-04-27 15:44:56.028  INFO 66740 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
 2021-04-27 15:44:56.031  INFO 66740 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'primaryThreadPool'
-2021-04-27 15:44:56.375  INFO 66740 --- [main] com.legends.cloud.web.config.WebConfig   : configureContentNegotiation-------->
+2021-04-27 15:44:56.375  INFO 66740 --- [main] WebConfig   : configureContentNegotiation-------->
 2021-04-27 15:45:00.164  INFO 66740 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
 2021-04-27 15:45:00.968  INFO 66740 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
 2021-04-27 15:45:00.986  INFO 66740 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'secondaryThreadPool'
-2021-04-27 15:45:01.521  INFO 66740 --- [main] com.legends.cloud.web.config.WebConfig   : configureAsyncSupport-------->
-2021-04-27 15:45:01.546  INFO 66740 --- [main] com.legends.cloud.web.config.WebConfig   : myCallableProcessingInterceptor-------->
-2021-04-27 15:45:02.164  INFO 66740 --- [main] com.legends.cloud.web.config.WebConfig   : configureDefaultServletHandling-------->
+2021-04-27 15:45:01.521  INFO 66740 --- [main] WebConfig   : configureAsyncSupport-------->
+2021-04-27 15:45:01.546  INFO 66740 --- [main] WebConfig   : myCallableProcessingInterceptor-------->
+2021-04-27 15:45:02.164  INFO 66740 --- [main] WebConfig   : configureDefaultServletHandling-------->
 2021-04-27 15:45:02.183  WARN 66740 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'defaultServletHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'defaultServletHandlerMapping' threw exception; nested exception is java.lang.IllegalStateException: Unable to locate the default servlet for serving static content. Please set the 'defaultServletName' property explicitly.
 2021-04-27 15:45:02.184  INFO 66740 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'secondaryThreadPool'
 2021-04-27 15:45:02.187  INFO 66740 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'primaryThreadPool'
@@ -88,7 +88,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
-	at com.legends.cloud.web.LegendsBaseStarterApplication.main(LegendsBaseStarterApplication.java:12)
+	at LegendsBaseStarterApplication.main(LegendsBaseStarterApplication.java:12)
 Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'defaultServletHandlerMapping' threw exception; nested exception is java.lang.IllegalStateException: Unable to locate the default servlet for serving static content. Please set the 'defaultServletName' property explicitly.
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
@@ -97,7 +97,7 @@ Caused by: java.lang.IllegalStateException: Unable to locate the default servlet
 	at org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler.setServletContext(DefaultServletHttpRequestHandler.java:111)
 	at org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer.enable(DefaultServletHandlerConfigurer.java:85)
 	at org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer.enable(DefaultServletHandlerConfigurer.java:71)
-	at com.legends.cloud.web.config.WebConfig.configureDefaultServletHandling(WebConfig.java:41)
+	at WebConfig.configureDefaultServletHandling(WebConfig.java:41)
 	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.configureDefaultServletHandling(WebMvcConfigurerComposite.java:74)
 	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.configureDefaultServletHandling(DelegatingWebMvcConfiguration.java:73)
 	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.defaultServletHandlerMapping(WebMvcConfigurationSupport.java:640)
@@ -152,7 +152,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
-	at com.legends.cloud.web.LegendsBaseStarterApplication.main(LegendsBaseStarterApplication.java:12)
+	at LegendsBaseStarterApplication.main(LegendsBaseStarterApplication.java:12)
 Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'defaultServletHandlerMapping' threw exception; nested exception is java.lang.IllegalStateException: Unable to locate the default servlet for serving static content. Please set the 'defaultServletName' property explicitly.
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
@@ -161,7 +161,7 @@ Caused by: java.lang.IllegalStateException: Unable to locate the default servlet
 	at org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler.setServletContext(DefaultServletHttpRequestHandler.java:111)
 	at org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer.enable(DefaultServletHandlerConfigurer.java:85)
 	at org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer.enable(DefaultServletHandlerConfigurer.java:71)
-	at com.legends.cloud.web.config.WebConfig.configureDefaultServletHandling(WebConfig.java:41)
+	at WebConfig.configureDefaultServletHandling(WebConfig.java:41)
 	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.configureDefaultServletHandling(WebMvcConfigurerComposite.java:74)
 	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.configureDefaultServletHandling(DelegatingWebMvcConfiguration.java:73)
 	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.defaultServletHandlerMapping(WebMvcConfigurationSupport.java:640)
@@ -216,7 +216,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
-	at com.legends.cloud.web.LegendsBaseStarterApplication.main(LegendsBaseStarterApplication.java:12)
+	at LegendsBaseStarterApplication.main(LegendsBaseStarterApplication.java:12)
 Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'defaultServletHandlerMapping' threw exception; nested exception is java.lang.IllegalStateException: Unable to locate the default servlet for serving static content. Please set the 'defaultServletName' property explicitly.
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
@@ -225,7 +225,7 @@ Caused by: java.lang.IllegalStateException: Unable to locate the default servlet
 	at org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler.setServletContext(DefaultServletHttpRequestHandler.java:111)
 	at org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer.enable(DefaultServletHandlerConfigurer.java:85)
 	at org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer.enable(DefaultServletHandlerConfigurer.java:71)
-	at com.legends.cloud.web.config.WebConfig.configureDefaultServletHandling(WebConfig.java:41)
+	at WebConfig.configureDefaultServletHandling(WebConfig.java:41)
 	at org.springframework.web.servlet.config.annotation.WebMvcConfigurerComposite.configureDefaultServletHandling(WebMvcConfigurerComposite.java:74)
 	at org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration.configureDefaultServletHandling(DelegatingWebMvcConfiguration.java:73)
 	at org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport.defaultServletHandlerMapping(WebMvcConfigurationSupport.java:640)

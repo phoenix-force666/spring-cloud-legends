@@ -1,4 +1,4 @@
-package com.legends.cloud.zuul.core;
+package top.legendscloud.zuul.core;
 
 import com.netflix.loadbalancer.Server;
 import com.netflix.loadbalancer.ZoneAvoidanceRule;

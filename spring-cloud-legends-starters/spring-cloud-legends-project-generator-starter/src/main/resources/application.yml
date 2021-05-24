@@ -3,29 +3,29 @@ initializr:
     maven:
       parent:
         artifact-id: legends-parent
-        groupId: com.legends.cloud
+        groupId: top.legendscloud
         version: 1.1.0.SNAPSHOT
   dependencies:
     - name: legends
       content:
         - name: legends-base-starter
           id: legends-base-starter
-          groupId: com.legends.cloud
+          groupId: top.legendscloud
           artifactId: legends-base-starter
           description: legends-base-starter spring bot、swagger and tomcat
         - name: legends-db-starter
           id: legends-db-starter
-          groupId: com.legends.cloud
+          groupId: top.legendscloud
           artifactId: legends-db-starter
           description: legends-db-starter orm 相关
         - name: legends-cache-starter
           id: legends-cache-starter
-          groupId: com.legends.cloud
+          groupId: top.legendscloud
           artifactId: legends-cache-starter
           description: legends-cache-starter
         - name: legends-akali-starter
           id: legends-akali-starter
-          groupId: com.legends.cloud
+          groupId: top.legendscloud
           artifactId: legends-cache-starter
           description: 动态路由
     - name: DB

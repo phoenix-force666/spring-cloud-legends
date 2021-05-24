@@ -4,10 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>spring-cloud-legends-starters</artifactId>
-        <groupId>com.legends.cloud</groupId>
+        <groupId>top.legendscloud</groupId>
         <version>2020.0.0-M1</version>
     </parent>
-    <groupId>com.legends.cloud</groupId>
+    <groupId>top.legendscloud</groupId>
     <artifactId>spring-cloud-legends-gateway-starter</artifactId>
     <name>spring-cloud-legends-gateway-starter</name>
     <description>spring-cloud-legends-gateway-starter</description>
@@ -18,7 +18,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.legends.cloud</groupId>
+            <groupId>top.legendscloud</groupId>
             <artifactId>spring-cloud-legends-common</artifactId>
         </dependency>
         <dependency>

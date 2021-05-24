@@ -1,12 +1,12 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.legends.cloud.web.config.LegendsBaseAutoConfiguration,\
-  com.legends.cloud.web.config.RestTemplateConfig,\
-  com.legends.cloud.web.config.Swagger2Config,\
-  com.legends.cloud.web.config.PrometheusConfig,\
-  com.legends.cloud.web.aspect.ControllerAspect,\
-  com.legends.cloud.web.executor.ExecutorNames,\
-  com.legends.cloud.web.executor.ExecutorConfig,\
-  com.legends.cloud.web.controller.BaseController,\
-  com.legends.cloud.web.controller.ErrorHandlerController,\
-  com.legends.cloud.web.controller.ExceptionHandlerController,\
-  com.legends.cloud.web.config.WebConfig
+  top.legendscloud.web.config.LegendsBaseAutoConfiguration,\
+  top.legendscloud.web.config.RestTemplateConfig,\
+  top.legendscloud.web.config.Swagger2Config,\
+  top.legendscloud.web.config.PrometheusConfig,\
+  top.legendscloud.web.aspect.ControllerAspect,\
+  top.legendscloud.web.executor.ExecutorNames,\
+  top.legendscloud.web.executor.ExecutorConfig,\
+  top.legendscloud.web.controller.BaseController,\
+  top.legendscloud.web.controller.ErrorHandlerController,\
+  top.legendscloud.web.controller.ExceptionHandlerController,\
+  top.legendscloud.web.config.WebConfig

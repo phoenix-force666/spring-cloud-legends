@@ -1,6 +1,6 @@
-package com.legends.cloud.zuul.core;
+package top.legendscloud.zuul.core;
 
-import com.legends.cloud.zuul.ribbon.DefaultPropertiesFactory;
+import top.legendscloud.zuul.ribbon.DefaultPropertiesFactory;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

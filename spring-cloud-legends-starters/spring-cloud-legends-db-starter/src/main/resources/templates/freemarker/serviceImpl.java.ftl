@@ -1,7 +1,7 @@
 package ${package.ServiceImpl};
 
-import com.legends.cloud.common.enums.CommonEnumCode;
-import com.legends.cloud.common.exception.BizException;
+import CommonEnumCode;
+import BizException;
 import ReqPage;
 import PageUtils;
 import ${package.Entity}.${entity};

@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<artifactId>spring-cloud-legends-utils</artifactId>
-		<groupId>com.legends.cloud</groupId>
+		<groupId>top.legendscloud</groupId>
 		<version>2020.0.0-M1</version>
 	</parent>
 
-	<groupId>com.legends.cloud</groupId>
+	<groupId>top.legendscloud</groupId>
 	<artifactId>spring-cloud-legends-file</artifactId>
 	<name>spring-cloud-legends-file</name>
 	<description>Demo project for Spring Boot</description>

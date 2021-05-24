@@ -1,4 +1,4 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.legends.cloud.db.config.MybatisPlusConfig,\
-com.legends.cloud.db.page.PageUtils,\
-com.legends.cloud.db.generator.LegendsCodeGenerator
+top.legendscloud.db.config.MybatisPlusConfig,\
+top.legendscloud.db.page.PageUtils,\
+top.legendscloud.db.generator.LegendsCodeGenerator

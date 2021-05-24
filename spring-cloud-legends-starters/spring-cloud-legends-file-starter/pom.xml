@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<artifactId>spring-cloud-legends-starters</artifactId>
-		<groupId>com.legends.cloud</groupId>
+		<groupId>top.legendscloud</groupId>
 		<version>2020.0.0-M1</version>
 	</parent>
-	<groupId>com.legends.cloud</groupId>
+	<groupId>top.legendscloud</groupId>
 	<artifactId>spring-cloud-legends-file-starter</artifactId>
 	<name>spring-cloud-legends-file-starter</name>
 	<description>spring-cloud-legends-file-starter</description>
@@ -38,7 +38,7 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.legends.cloud</groupId>
+			<groupId>top.legendscloud</groupId>
 			<artifactId>spring-cloud-legends-file</artifactId>
 		</dependency>
 		<dependency>
@@ -46,7 +46,11 @@
 			<artifactId>spring-boot-starter-aop</artifactId>
 			<scope>provided</scope>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+        </dependency>
+    </dependencies>
 
 	<build>
 		<plugins>

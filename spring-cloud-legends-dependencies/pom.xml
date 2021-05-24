@@ -5,23 +5,23 @@
     <modelVersion>4.0.0</modelVersion>
 <!--    <parent>
         <artifactId>spring-cloud-legends</artifactId>
-        <groupId>com.legends.cloud</groupId>
+        <groupId>top.legendscloud</groupId>
         <version>1.2.6-SNAPSHOT</version>
     </parent>-->
-    <parent>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-dependencies-parent</artifactId>
-        <version>2.3.1.RELEASE</version>
-        <relativePath/>
-    </parent>
+<!--    <parent>-->
+<!--        <groupId>org.springframework.cloud</groupId>-->
+<!--        <artifactId>spring-cloud-dependencies-parent</artifactId>-->
+<!--        <version>2.3.1.RELEASE</version>-->
+<!--        <relativePath/>-->
+<!--    </parent>-->
 
-    <groupId>com.legends.cloud</groupId>
+    <groupId>top.legendscloud</groupId>
     <artifactId>spring-cloud-legends-dependencies</artifactId>
     <version>2020.0.0-M1</version>
     <packaging>pom</packaging>
 
     <properties>
-        <legends.version>1.0.0-M1</legends.version>
+        <legends.version>2020.0.0-M1</legends.version>
     </properties>
 
 
@@ -29,106 +29,106 @@
         <dependencies>
 
             <dependency>
-                <groupId>com.legends.cloud</groupId>
+                <groupId>top.legendscloud</groupId>
                 <artifactId>spring-cloud-legends-common</artifactId>
                 <version>${legends.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.legends.cloud</groupId>
+                <groupId>top.legendscloud</groupId>
                 <artifactId>spring-cloud-legends-web-starter</artifactId>
                 <version>${legends.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.legends.cloud</groupId>
+                <groupId>top.legendscloud</groupId>
                 <artifactId>spring-cloud-legends-db-starter</artifactId>
                 <version>${legends.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.legends.cloud</groupId>
+                <groupId>top.legendscloud</groupId>
                 <artifactId>spring-cloud-legends-monitor-starter</artifactId>
                 <version>${legends.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.legends.cloud</groupId>
+                <groupId>top.legendscloud</groupId>
                 <artifactId>spring-cloud-legends-file</artifactId>
                 <version>${legends.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.legends.cloud</groupId>
+                <groupId>top.legendscloud</groupId>
                 <artifactId>spring-cloud-legends-mock</artifactId>
                 <version>${legends.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.legends.cloud</groupId>
+                <groupId>top.legendscloud</groupId>
                 <artifactId>spring-cloud-legends-file-starter</artifactId>
                 <version>${legends.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.legends.cloud</groupId>
+                <groupId>top.legendscloud</groupId>
                 <artifactId>spring-cloud-legends-process-engine-starter</artifactId>
                 <version>${legends.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.legends.cloud</groupId>
+                <groupId>top.legendscloud</groupId>
                 <artifactId>spring-cloud-legends-elastseach-starter</artifactId>
                 <version>${legends.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.legends.cloud</groupId>
+                <groupId>top.legendscloud</groupId>
                 <artifactId>spring-cloud-legends-cache-starter</artifactId>
                 <version>${legends.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.legends.cloud</groupId>
+                <groupId>top.legendscloud</groupId>
                 <artifactId>spring-cloud-legends-gateway-starter</artifactId>
                 <version>${legends.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.legends.cloud</groupId>
+                <groupId>top.legendscloud</groupId>
                 <artifactId>spring-cloud-legends-zuul-starter</artifactId>
                 <version>${legends.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.legends.cloud</groupId>
+                <groupId>top.legendscloud</groupId>
                 <artifactId>spring-cloud-legends-eureka-starter</artifactId>
                 <version>${legends.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.legends.cloud</groupId>
+                <groupId>top.legendscloud</groupId>
                 <artifactId>spring-cloud-legends-nacos-starter</artifactId>
                 <version>${legends.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.legends.cloud</groupId>
+                <groupId>top.legendscloud</groupId>
                 <artifactId>spring-cloud-legends-apollo-starter</artifactId>
                 <version>${legends.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.legends.cloud</groupId>
+                <groupId>top.legendscloud</groupId>
                 <artifactId>spring-cloud-legends-mail-starter</artifactId>
                 <version>${legends.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.legends.cloud</groupId>
+                <groupId>top.legendscloud</groupId>
                 <artifactId>spring-cloud-legends-code-generator-starter</artifactId>
                 <version>${legends.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.legends.cloud</groupId>
+                <groupId>top.legendscloud</groupId>
                 <artifactId>spring-cloud-legends-project-generator-starter</artifactId>
                 <version>${legends.version}</version>
             </dependency>

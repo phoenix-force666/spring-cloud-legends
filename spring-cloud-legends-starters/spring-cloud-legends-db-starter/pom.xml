@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<parent>
 		<artifactId>spring-cloud-legends-starters</artifactId>
-		<groupId>com.legends.cloud</groupId>
+		<groupId>top.legendscloud</groupId>
 		<version>2020.0.0-M1</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
@@ -39,7 +39,7 @@
 
 		<!--代码生成器-->
 		<dependency>
-			<groupId>com.legends.cloud</groupId>
+			<groupId>top.legendscloud</groupId>
 			<artifactId>spring-cloud-legends-code-generator-starter</artifactId>
 		</dependency>
 
