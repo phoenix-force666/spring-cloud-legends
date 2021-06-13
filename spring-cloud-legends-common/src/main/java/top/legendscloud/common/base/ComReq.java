@@ -13,8 +13,7 @@ import java.io.Serializable;
  * @Author herion
  * @Description //公共请求类
  * @Date  2019/2/26
- * @Param
- * @return
+ * @return ComReq
  **/
 @Data
 @ToString
@@ -40,7 +39,7 @@ public class ComReq<T> implements Serializable {
      * 渠道编号
      */
     @NotBlank
-    @ApiModelProperty(value="渠道编号" ,required=true,example = "jfapl008",notes = "渠道编号系统分配")
+    @ApiModelProperty(value="渠道编号" ,required=true,example = "ch0001",notes = "渠道编号系统分配")
     private String chCode;
 
     @NotBlank

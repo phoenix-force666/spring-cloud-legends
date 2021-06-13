@@ -15,4 +15,5 @@
         <module>spring-cloud-legends-file</module>
         <module>spring-cloud-legends-mock</module>
     </modules>
+
 </project>

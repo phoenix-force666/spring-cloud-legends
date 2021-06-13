@@ -1,9 +1,12 @@
 package top.legendscloud.gateway.config;
 
+import com.github.xiaoymin.knife4j.spring.annotations.EnableKnife4j;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigurationPackage;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.gateway.config.GatewayProperties;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.support.NameUtils;
@@ -22,11 +25,14 @@ import java.util.List;
 @Primary
 @AllArgsConstructor
 @Configuration
+@RefreshScope
 public class SwaggerResourceConfig implements SwaggerResourcesProvider {
 
-    private final RouteLocator routeLocator;
-    private final GatewayProperties gatewayProperties;
+    @Autowired
+    private RouteLocator routeLocator;
 
+    @Autowired
+    private GatewayProperties gatewayProperties;
 
     @Override
     public List<SwaggerResource> get() {

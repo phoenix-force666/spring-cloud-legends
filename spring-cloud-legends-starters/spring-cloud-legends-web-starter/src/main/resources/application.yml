@@ -77,7 +77,7 @@ legends:
     - /mng/**
   db:
     type: oracle
-    mapperScan: com.legends.demo.mapper*
+    mapperScan: top.legendscloud.demo.mapper*
 hystrix:
   command:
     default:

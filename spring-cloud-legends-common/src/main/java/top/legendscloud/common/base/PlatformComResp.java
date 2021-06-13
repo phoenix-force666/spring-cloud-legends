@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 
 /**
  * @Author herion
- * @Description //公共响应类
+ * @Description 公共响应类
  * @Date  2019/2/26
  * @Param 
  * @return 

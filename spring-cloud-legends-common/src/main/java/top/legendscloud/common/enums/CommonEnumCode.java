@@ -6,8 +6,7 @@ import lombok.Getter;
  * @Author herion
  * @Description 系统基础业务错误码范围：00 ～ 99；错误码前缀为系统简称。
  * @Date  2019/2/26
- * @Param
- * @return
+ * @return CommonEnumCode
  **/
 public enum CommonEnumCode implements CommonEnum {
 

@@ -29,7 +29,7 @@ public class DateUtil {
 
     /**
      * 减日期时间转为毫秒
-     * @return
+     * @return Date
      */
     public static Date dateConvert(String dateTime){
          Date date=null;

@@ -667,7 +667,7 @@ public class StringUtil extends StringUtils {
      * flq 字符串转换成时间
      *
      * @param str 时间字符串
-     * @return
+     * @return Date
      */
     public static Date strToDate(String str) {
         Date date = null;

@@ -1,3 +1,4 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
   top.legendscloud.gateway.config.SwaggerAutoConfig,\
-  top.legendscloud.gateway.config.SwaggerResourceConfig
+  top.legendscloud.gateway.config.SwaggerResourceConfig,\
+  top.legendscloud.gateway.controller.SwaggerHandlerController

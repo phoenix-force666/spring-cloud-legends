@@ -8,7 +8,7 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 /**
- * @Description
+ * @Description 公共删除DTO
  * @Author herion
  * @Date 2020-07-22 16:06
  */
