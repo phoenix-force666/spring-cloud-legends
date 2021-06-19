@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>spring-cloud-legends</artifactId>
-        <groupId>com.legends.cloud</groupId>
-        <version>1.0.0-M1</version>
+        <groupId>top.legendscloud</groupId>
+        <version>2020.0.0-M1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -21,8 +21,8 @@
         <module>spring-cloud-legends-gateway-starter</module>
         <module>spring-cloud-legends-code-generator-starter</module>
         <module>spring-cloud-legends-project-generator-starter</module>
-        <module>spring-cloud-legends-zuul-starter</module>
 <!--        <module>spring-cloud-legends-monitor-starter</module>-->
+<!--        <module>spring-cloud-legends-zuul-starter</module>-->
         <module>spring-cloud-legends-process-engine-starter</module>
         <module>spring-cloud-legends-elastseach-starter</module>
         <module>spring-cloud-legends-eureka-starter</module>

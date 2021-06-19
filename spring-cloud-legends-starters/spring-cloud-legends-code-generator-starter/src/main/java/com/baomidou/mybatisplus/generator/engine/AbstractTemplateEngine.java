@@ -40,9 +40,6 @@ import java.util.Objects;
 
 /**
  * 模板引擎抽象类
- *
- * @author hubin
- * @since 2018-01-10
  */
 public abstract class AbstractTemplateEngine {
 

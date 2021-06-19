@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.legends.cloud.file.config.FileTypeAutoConfiguration
+top.legendscloud.file.config.FileTypeAutoConfiguration

@@ -1,4 +1,4 @@
-package com.legends.cloud.zuul.ribbon;
+package top.legendscloud.zuul.ribbon;
 
 import com.netflix.client.config.IClientConfig;
 import com.netflix.config.ConfigurationManager;

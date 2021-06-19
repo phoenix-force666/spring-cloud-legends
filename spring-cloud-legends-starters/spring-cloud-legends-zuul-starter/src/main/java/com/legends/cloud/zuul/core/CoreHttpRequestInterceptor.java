@@ -1,4 +1,4 @@
-package com.legends.cloud.zuul.core;
+package top.legendscloud.zuul.core;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

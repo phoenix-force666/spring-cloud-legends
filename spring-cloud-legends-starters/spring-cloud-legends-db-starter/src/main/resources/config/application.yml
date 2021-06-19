@@ -9,4 +9,4 @@ legends:
   enabled: true
   db:
     type: oracle
-    mapperScan: com.legends.cloud.demo.mapper*
+    mapperScan: top.legendscloud.demo.mapper*

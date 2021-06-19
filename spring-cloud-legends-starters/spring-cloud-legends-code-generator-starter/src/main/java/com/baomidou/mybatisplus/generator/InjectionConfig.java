@@ -27,9 +27,6 @@ import java.util.Map;
 
 /**
  * 抽象的对外接口
- *
- * @author hubin
- * @since 2016-12-07
  */
 @Data
 @Accessors(chain = true)

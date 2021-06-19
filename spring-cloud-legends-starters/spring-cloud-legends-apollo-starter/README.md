@@ -6,10 +6,15 @@
 - 自动集成Apollo
 - 支持配置加密
   
+## spring-cloud-legends-apollo-starter 使用步骤
+
+### 添加依赖
+
+### 配置文件
 
 ## 配置文件关闭开启Apollo配置
-    - apollo.bootstrap.enabled=true 开启使用Apollo
-    - apollo.bootstrap.enabled=false 关闭使用Apollo配置
+- apollo.bootstrap.enabled=true 开启使用Apollo 
+- apollo.bootstrap.enabled=false 关闭使用Apollo配置
 
 ## 常用配置说明
 - apollo.meta 的配置中心地址
@@ -25,20 +30,23 @@
   apollo.bootstrap.enabled=true 
   
 - apollo.bootstrap.namespaces 指定要加载的命名空间  
-  apollo.bootstrap.namespaces=application,public-legends
-
--   
+-  apollo.bootstrap.namespaces=application,public-legends
   
 ## 配置文件加密配置
 ### 密码加密命令
-    jasypt加密
+
+### jasypt加密
     java -cp jasypt-1.9.2.jar org.jasypt.intf.cli.JasyptPBEStringEncryptionCLI input="123456" password="mysalt" algorithm=PBEWithMD5AndDES
-    
     input：密码
-    
     password：盐
-    
     algorithm：加密方式
+### 或者使用 EncryptUtil 加密配置
+```
+String input = "herion";
+String result=EncryptUtil.getEncryptedParams(input, "Q0Xv57uP82Dw9oJn3");
+System.out.println(result);
+```
+
 ### 加密秘钥配置
 jasypt.encryptor.password=mysalt
 

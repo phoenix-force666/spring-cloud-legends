@@ -1,0 +1,399 @@
+2021-05-13 15:13:57.996  INFO 17488 --- [main] t.l.c.n.LegendsNacosStarterApplication   : Starting LegendsNacosStarterApplication using Java 1.8.0_65 on DESKTOP-6U2TG0S with PID 17488 (F:\java_workspace\open_source\spring-cloud-legends\spring-cloud-legends-starters\spring-cloud-legends-nacos-starter\target\classes started by herion in F:\java_workspace\open_source\spring-cloud-legends)
+2021-05-13 15:13:58.003  INFO 17488 --- [main] t.l.c.n.LegendsNacosStarterApplication   : The following profiles are active: dev
+2021-05-13 15:13:59.162  INFO 17488 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d1f83702-9dee-36cb-8322-7e53a93e06d1
+2021-05-13 15:13:59.643  INFO 17488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-13 15:13:59.653  INFO 17488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-13 15:13:59.756  INFO 17488 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2021-05-13 15:13:59.757  INFO 17488 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'primaryThreadPool'
+2021-05-13 15:14:00.145  INFO 17488 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-13 15:14:00.157  INFO 17488 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-13 15:14:00.158  INFO 17488 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-13 15:14:00.282  INFO 17488 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-13 15:14:00.283  INFO 17488 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2226 ms
+2021-05-13 15:14:00.416 ERROR 17488 --- [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'webMvcMetricsFilter' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/web/servlet/WebMvcMetricsAutoConfiguration.class]: Unsatisfied dependency expressed through method 'webMvcMetricsFilter' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'prometheusMeterRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/export/prometheus/PrometheusMetricsExportAutoConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'configurer' defined in class path resource [com/legends/cloud/web/config/PrometheusConfig.class]: Unexpected exception during bean creation; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.application.name' in value "${spring.application.name}"
+2021-05-13 15:14:00.460  INFO 17488 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-05-13 15:14:00.466  WARN 17488 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [logback-4] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1081)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+2021-05-13 15:14:00.469  WARN 17488 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2021-05-13 15:14:00.469  INFO 17488 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'primaryThreadPool'
+2021-05-13 15:14:00.483  INFO 17488 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-13 15:14:00.504 ERROR 17488 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:782)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:774)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:339)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1340)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1329)
+	at LegendsNacosStarterApplication.main(LegendsNacosStarterApplication.java:13)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:450)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:199)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:181)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:159)
+	... 9 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcMetricsFilter' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/web/servlet/WebMvcMetricsAutoConfiguration.class]: Unsatisfied dependency expressed through method 'webMvcMetricsFilter' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'prometheusMeterRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/export/prometheus/PrometheusMetricsExportAutoConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'configurer' defined in class path resource [com/legends/cloud/web/config/PrometheusConfig.class]: Unexpected exception during bean creation; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.application.name' in value "${spring.application.name}"
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:212)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:203)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:97)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:259)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:233)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5161)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:843)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	... 14 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'prometheusMeterRegistry' defined in class path resource [org/springframework/boot/actuate/autoconfigure/metrics/export/prometheus/PrometheusMetricsExportAutoConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'configurer' defined in class path resource [com/legends/cloud/web/config/PrometheusConfig.class]: Unexpected exception during bean creation; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.application.name' in value "${spring.application.name}"
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:610)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 56 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'configurer' defined in class path resource [com/legends/cloud/web/config/PrometheusConfig.class]: Unexpected exception during bean creation; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.application.name' in value "${spring.application.name}"
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1605)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1562)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1406)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.resolveStream(DefaultListableBeanFactory.java:2108)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.orderedStream(DefaultListableBeanFactory.java:2102)
+	at org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryConfigurer.asOrderedList(MeterRegistryConfigurer.java:90)
+	at org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryConfigurer.customize(MeterRegistryConfigurer.java:77)
+	at org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryConfigurer.configure(MeterRegistryConfigurer.java:63)
+	at org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryPostProcessor.postProcessAfterInitialization(MeterRegistryPostProcessor.java:64)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:437)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1790)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602)
+	... 66 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.application.name' in value "${spring.application.name}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:178)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524)
+	... 84 common frames omitted
+
+2021-05-13 22:51:15.615  INFO 4316 --- [main] c.a.n.c.c.impl.LocalConfigInfoProcessor  : LOCAL_SNAPSHOT_PATH:C:\Users\herion\nacos\config
+2021-05-13 22:51:15.685  INFO 4316 --- [main] org.reflections.Reflections              : Reflections took 40 ms to scan 1 urls, producing 3 keys and 6 values 
+2021-05-13 22:51:15.715  INFO 4316 --- [main] org.reflections.Reflections              : Reflections took 10 ms to scan 1 urls, producing 4 keys and 9 values 
+2021-05-13 22:51:15.735  INFO 4316 --- [main] org.reflections.Reflections              : Reflections took 10 ms to scan 1 urls, producing 3 keys and 10 values 
+2021-05-13 22:51:15.850  INFO 4316 --- [main] org.reflections.Reflections              : Reflections took 115 ms to scan 182 urls, producing 0 keys and 0 values 
+2021-05-13 22:51:15.860  INFO 4316 --- [main] org.reflections.Reflections              : Reflections took 10 ms to scan 1 urls, producing 1 keys and 5 values 
+2021-05-13 22:51:15.890  INFO 4316 --- [main] org.reflections.Reflections              : Reflections took 20 ms to scan 1 urls, producing 1 keys and 7 values 
+2021-05-13 22:51:15.900  INFO 4316 --- [main] org.reflections.Reflections              : Reflections took 10 ms to scan 1 urls, producing 2 keys and 8 values 
+2021-05-13 22:51:15.982  INFO 4316 --- [main] org.reflections.Reflections              : Reflections took 72 ms to scan 182 urls, producing 0 keys and 0 values 
+2021-05-13 22:51:15.992  INFO 4316 --- [main] com.alibaba.nacos.common.remote.client   : [config-0-42c8b47d-580f-470f-bc14-c5a07af4758e]RpcClient init label, labels={module=config, Vipserver-Tag=null, source=sdk, Amory-Tag=null, Location-Tag=null, taskId=0, AppName=unknown}
+2021-05-13 22:51:15.992  INFO 4316 --- [main] com.alibaba.nacos.common.remote.client   : [config-0-42c8b47d-580f-470f-bc14-c5a07af4758e]Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$317/804347788
+2021-05-13 22:51:15.992  INFO 4316 --- [main] com.alibaba.nacos.common.remote.client   : [config-0-42c8b47d-580f-470f-bc14-c5a07af4758e]Register server push request handler:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$$Lambda$318/2124978601
+2021-05-13 22:51:15.992  INFO 4316 --- [main] com.alibaba.nacos.common.remote.client   : [config-0-42c8b47d-580f-470f-bc14-c5a07af4758e]Registry connection listener to current client:com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$1
+2021-05-13 22:51:15.992  INFO 4316 --- [main] com.alibaba.nacos.common.remote.client   : [config-0-42c8b47d-580f-470f-bc14-c5a07af4758e]RpcClient init, ServerListFactory =com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient$2
+2021-05-13 22:51:15.992  INFO 4316 --- [main] com.alibaba.nacos.common.remote.client   : [config-0-42c8b47d-580f-470f-bc14-c5a07af4758e] Try to connect to server on start up, server: {serverIp='127.0.0.1', server main port=8848}
+2021-05-13 22:51:16.893  INFO 4316 --- [main] com.alibaba.nacos.common.remote.client   : [config-0-42c8b47d-580f-470f-bc14-c5a07af4758e] Success to connect to server [127.0.0.1:8848] on start up,connectionId=1620917476690_127.0.0.1_52897
+2021-05-13 22:51:16.893  INFO 4316 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [config-0-42c8b47d-580f-470f-bc14-c5a07af4758e]Notify connected event to listeners.
+2021-05-13 22:51:16.893  INFO 4316 --- [com.alibaba.nacos.client.remote.worker] c.a.n.client.config.impl.ClientWorker    : [config-0-42c8b47d-580f-470f-bc14-c5a07af4758e] Connected,notify listen context...
+2021-05-13 22:51:16.893  INFO 4316 --- [main] com.alibaba.nacos.common.remote.client   : [config-0-42c8b47d-580f-470f-bc14-c5a07af4758e]Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2021-05-13 22:51:16.893  INFO 4316 --- [main] com.alibaba.nacos.common.remote.client   : [config-0-42c8b47d-580f-470f-bc14-c5a07af4758e]Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$4
+2021-05-13 22:51:16.933  INFO 4316 --- [main] c.a.nacos.client.config.impl.Limiter     : limitTime:5.0
+2021-05-13 22:51:16.943  WARN 4316 --- [main] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[spring-cloud-legends-nacos-example] & group[DEFAULT_GROUP]
+2021-05-13 22:51:16.996  INFO 4316 --- [main] c.a.nacos.client.config.utils.JvmUtil    : isMultiInstance:false
+2021-05-13 22:51:17.006  INFO 4316 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-spring-cloud-legends-nacos-example-dev.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-spring-cloud-legends-nacos-example.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-spring-cloud-legends-nacos-example,DEFAULT_GROUP'}]
+2021-05-13 22:51:17.006  INFO 4316 --- [main] t.l.n.LegendsNacosStarterApplication     : The following profiles are active: dev
+2021-05-13 22:51:17.922  INFO 4316 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a0140c0a-39ee-3dc0-b84d-fa7ea38dc5a9
+2021-05-13 22:51:18.362  INFO 4316 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.sentinel-com.alibaba.cloud.sentinel.SentinelProperties' of type [com.alibaba.cloud.sentinel.SentinelProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-13 22:51:18.372  INFO 4316 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration' of type [com.alibaba.cloud.sentinel.custom.SentinelAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-05-13 22:51:18.590  INFO 4316 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2021-05-13 22:51:18.590  INFO 4316 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'primaryThreadPool'
+2021-05-13 22:51:19.018  INFO 4316 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-05-13 22:51:19.048  INFO 4316 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-13 22:51:19.048  INFO 4316 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-13 22:51:19.248  INFO 4316 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-13 22:51:19.248  INFO 4316 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2232 ms
+2021-05-13 22:51:19.784  INFO 4316 --- [main] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/jolokia' to jolokia-actuator-endpoint
+2021-05-13 22:51:20.512  INFO 4316 --- [main] c.a.c.s.SentinelWebAutoConfiguration     : [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2021-05-13 22:51:20.902  INFO 4316 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2021-05-13 22:51:20.912  INFO 4316 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Environment :null
+2021-05-13 22:51:20.912  INFO 4316 --- [main] com.alibaba.nacos.client.naming          : initializer namespace from System Property :null
+2021-05-13 22:51:20.952  INFO 4316 --- [main] com.alibaba.nacos.common.remote.client   : [444237d0-5206-4369-bcf3-68ada04c79c6]RpcClient init label, labels={module=naming, source=sdk}
+2021-05-13 22:51:20.962  INFO 4316 --- [main] com.alibaba.nacos.common.remote.client   : [444237d0-5206-4369-bcf3-68ada04c79c6]RpcClient init, ServerListFactory =com.alibaba.nacos.client.naming.core.ServerListManager
+2021-05-13 22:51:20.962  INFO 4316 --- [main] com.alibaba.nacos.common.remote.client   : [444237d0-5206-4369-bcf3-68ada04c79c6] Try to connect to server on start up, server: {serverIp='localhost', server main port=8848}
+2021-05-13 22:51:21.082  INFO 4316 --- [main] com.alibaba.nacos.common.remote.client   : [444237d0-5206-4369-bcf3-68ada04c79c6] Success to connect to server [localhost:8848] on start up,connectionId=1620917480972_127.0.0.1_52898
+2021-05-13 22:51:21.082  INFO 4316 --- [main] com.alibaba.nacos.common.remote.client   : [444237d0-5206-4369-bcf3-68ada04c79c6]Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2021-05-13 22:51:21.082  INFO 4316 --- [main] com.alibaba.nacos.common.remote.client   : [444237d0-5206-4369-bcf3-68ada04c79c6]Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$4
+2021-05-13 22:51:21.082  INFO 4316 --- [main] com.alibaba.nacos.common.remote.client   : [444237d0-5206-4369-bcf3-68ada04c79c6]Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+2021-05-13 22:51:21.082  INFO 4316 --- [main] com.alibaba.nacos.common.remote.client   : [444237d0-5206-4369-bcf3-68ada04c79c6]Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcConnectionEventListener
+2021-05-13 22:51:21.502  INFO 4316 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 21 endpoint(s) beneath base path '/actuator'
+2021-05-13 22:51:22.163  INFO 4316 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-13 22:51:22.433  INFO 4316 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'Nacos-Watch-Task-Scheduler'
+2021-05-13 22:51:23.053  INFO 4316 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-13 22:51:23.103  INFO 4316 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2021-05-13 22:51:23.103  INFO 4316 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'secondaryThreadPool'
+2021-05-13 22:51:23.163  INFO 4316 --- [main] c.a.n.client.identify.CredentialWatcher  : null No credential found
+2021-05-13 22:51:23.203  INFO 4316 --- [main] com.alibaba.nacos.client.naming          : init new ips(0) service: DEFAULT_GROUP@@spring-cloud-legends-nacos-example@@DEFAULT -> []
+2021-05-13 22:51:23.213  INFO 4316 --- [main] com.alibaba.nacos.client.naming          : current ips:(0) service: DEFAULT_GROUP@@spring-cloud-legends-nacos-example@@DEFAULT -> []
+2021-05-13 22:51:23.260  INFO 4316 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-05-13 22:51:23.270  INFO 4316 --- [main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] public registering service spring-cloud-legends-nacos-example with instance Instance{instanceId='null', ip='192.168.1.52', port=8080, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={preserved.register.source=SPRING_CLOUD}}
+2021-05-13 22:51:23.290  INFO 4316 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP spring-cloud-legends-nacos-example 192.168.1.52:8080 register finished
+2021-05-13 22:51:23.390  INFO 4316 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-05-13 22:51:23.410  INFO 4316 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 2 custom documentation plugin(s)
+2021-05-13 22:51:23.491  INFO 4316 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-05-13 22:51:23.722  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_1
+2021-05-13 22:51:23.722  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingDELETE_1
+2021-05-13 22:51:23.722  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_2
+2021-05-13 22:51:23.722  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_3
+2021-05-13 22:51:23.722  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_4
+2021-05-13 22:51:23.722  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_5
+2021-05-13 22:51:23.732  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_6
+2021-05-13 22:51:23.732  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_7
+2021-05-13 22:51:23.732  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_8
+2021-05-13 22:51:23.732  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_9
+2021-05-13 22:51:23.732  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_10
+2021-05-13 22:51:23.732  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_11
+2021-05-13 22:51:23.742  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_12
+2021-05-13 22:51:23.742  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_13
+2021-05-13 22:51:23.742  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_14
+2021-05-13 22:51:23.742  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_15
+2021-05-13 22:51:23.742  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_16
+2021-05-13 22:51:23.752  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_17
+2021-05-13 22:51:23.752  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_18
+2021-05-13 22:51:23.752  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_19
+2021-05-13 22:51:23.752  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingPOST_1
+2021-05-13 22:51:23.752  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_20
+2021-05-13 22:51:23.752  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_21
+2021-05-13 22:51:23.762  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingPOST_2
+2021-05-13 22:51:23.762  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_22
+2021-05-13 22:51:23.762  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_23
+2021-05-13 22:51:23.762  INFO 4316 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [444237d0-5206-4369-bcf3-68ada04c79c6]receive server push request,request=NotifySubscriberRequest,requestId=3
+2021-05-13 22:51:23.790  INFO 4316 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.client.naming          : init new ips(1) service: DEFAULT_GROUP@@spring-cloud-legends-nacos-example -> [{"ip":"192.168.1.52","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@spring-cloud-legends-nacos-example","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2021-05-13 22:51:23.790  INFO 4316 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@spring-cloud-legends-nacos-example -> [{"ip":"192.168.1.52","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@spring-cloud-legends-nacos-example","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2021-05-13 22:51:23.790  INFO 4316 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [444237d0-5206-4369-bcf3-68ada04c79c6]ack server push request,request=NotifySubscriberRequest,requestId=3
+2021-05-13 22:51:23.810  INFO 4316 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-05-13 22:51:23.810  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getTimeUsingGET_1
+2021-05-13 22:51:23.820  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getTimeUsingPOST_1
+2021-05-13 22:51:23.830  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: errorUsingGET_1
+2021-05-13 22:51:23.830  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: errorUsingHEAD_1
+2021-05-13 22:51:23.830  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: errorUsingPOST_1
+2021-05-13 22:51:23.830  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: errorUsingPUT_1
+2021-05-13 22:51:23.830  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: errorUsingPATCH_1
+2021-05-13 22:51:23.830  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: errorUsingDELETE_1
+2021-05-13 22:51:23.830  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: errorUsingOPTIONS_1
+2021-05-13 22:51:23.830  INFO 4316 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: errorUsingTRACE_1
+2021-05-13 22:51:23.860  INFO 4316 --- [main] t.l.n.LegendsNacosStarterApplication     : Started LegendsNacosStarterApplication in 9.713 seconds (JVM running for 10.219)
+2021-05-13 22:51:23.910  INFO 4316 --- [main] c.a.n.client.config.impl.ClientWorker    : [config_rpc_client] [subscribe] spring-cloud-legends-nacos-example-dev.properties+DEFAULT_GROUP
+2021-05-13 22:51:23.910  INFO 4316 --- [main] c.a.nacos.client.config.impl.CacheData   : [config_rpc_client] [add-listener] ok, tenant=, dataId=spring-cloud-legends-nacos-example-dev.properties, group=DEFAULT_GROUP, cnt=1
+2021-05-13 22:51:23.910  INFO 4316 --- [main] c.a.n.client.config.impl.ClientWorker    : [config_rpc_client] [subscribe] spring-cloud-legends-nacos-example+DEFAULT_GROUP
+2021-05-13 22:51:23.910  INFO 4316 --- [main] c.a.nacos.client.config.impl.CacheData   : [config_rpc_client] [add-listener] ok, tenant=, dataId=spring-cloud-legends-nacos-example, group=DEFAULT_GROUP, cnt=1
+2021-05-13 22:51:23.910  INFO 4316 --- [main] c.a.n.client.config.impl.ClientWorker    : [config_rpc_client] [subscribe] spring-cloud-legends-nacos-example.properties+DEFAULT_GROUP
+2021-05-13 22:51:23.910  INFO 4316 --- [main] c.a.nacos.client.config.impl.CacheData   : [config_rpc_client] [add-listener] ok, tenant=, dataId=spring-cloud-legends-nacos-example.properties, group=DEFAULT_GROUP, cnt=1
+2021-05-13 22:51:24.232  INFO 4316 --- [com.alibaba.nacos.client.naming.updater.0] com.alibaba.nacos.client.naming          : new ips(1) service: DEFAULT_GROUP@@spring-cloud-legends-nacos-example@@DEFAULT -> [{"ip":"192.168.1.52","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@spring-cloud-legends-nacos-example","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2021-05-13 22:51:24.232  INFO 4316 --- [com.alibaba.nacos.client.naming.updater.0] com.alibaba.nacos.client.naming          : current ips:(1) service: DEFAULT_GROUP@@spring-cloud-legends-nacos-example@@DEFAULT -> [{"ip":"192.168.1.52","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@spring-cloud-legends-nacos-example","metadata":{"preserved.register.source":"SPRING_CLOUD"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2021-05-13 22:51:29.841  INFO 4316 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-13 22:51:29.841  INFO 4316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-13 22:51:29.843  INFO 4316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-05-13 22:51:29.998  INFO 4316 --- [http-nio-8080-exec-1] t.l.web.aspect.ControllerAspect          : 《《===== RequestURI：/error,方法：error(未定义接口) =====》》
+2021-05-13 22:51:29.999  INFO 4316 --- [http-nio-8080-exec-1] t.l.web.aspect.ControllerAspect          : 请求参数：
+2021-05-13 22:51:30.112  INFO 4316 --- [http-nio-8080-exec-1] t.l.web.aspect.ControllerAspect          : 响应信息：{"code":"S4","msg":"访问资源不存在","respTime":"20210513225130"}
+2021-05-13 22:51:30.912  INFO 4316 --- [http-nio-8080-exec-3] t.l.web.aspect.ControllerAspect          : 《《===== RequestURI：/config/get,方法：get(未定义接口) =====》》
+2021-05-13 22:51:30.912  INFO 4316 --- [http-nio-8080-exec-3] t.l.web.aspect.ControllerAspect          : 请求参数：该方法没有参数
+2021-05-13 22:51:30.915  INFO 4316 --- [http-nio-8080-exec-3] t.l.web.aspect.ControllerAspect          : 响应信息：false
+2021-05-13 22:51:31.597  INFO 4316 --- [http-nio-8080-exec-2] t.l.web.aspect.ControllerAspect          : 《《===== RequestURI：/config/get,方法：get(未定义接口) =====》》
+2021-05-13 22:51:31.597  INFO 4316 --- [http-nio-8080-exec-2] t.l.web.aspect.ControllerAspect          : 请求参数：该方法没有参数
+2021-05-13 22:51:31.597  INFO 4316 --- [http-nio-8080-exec-2] t.l.web.aspect.ControllerAspect          : 响应信息：false
+2021-05-13 22:51:31.795  INFO 4316 --- [http-nio-8080-exec-4] t.l.web.aspect.ControllerAspect          : 《《===== RequestURI：/config/get,方法：get(未定义接口) =====》》
+2021-05-13 22:51:31.796  INFO 4316 --- [http-nio-8080-exec-4] t.l.web.aspect.ControllerAspect          : 请求参数：该方法没有参数
+2021-05-13 22:51:31.796  INFO 4316 --- [http-nio-8080-exec-4] t.l.web.aspect.ControllerAspect          : 响应信息：false
+2021-05-13 22:51:31.985  INFO 4316 --- [http-nio-8080-exec-5] t.l.web.aspect.ControllerAspect          : 《《===== RequestURI：/config/get,方法：get(未定义接口) =====》》
+2021-05-13 22:51:31.985  INFO 4316 --- [http-nio-8080-exec-5] t.l.web.aspect.ControllerAspect          : 请求参数：该方法没有参数
+2021-05-13 22:51:31.985  INFO 4316 --- [http-nio-8080-exec-5] t.l.web.aspect.ControllerAspect          : 响应信息：false
+2021-05-13 22:51:32.174  INFO 4316 --- [http-nio-8080-exec-6] t.l.web.aspect.ControllerAspect          : 《《===== RequestURI：/config/get,方法：get(未定义接口) =====》》
+2021-05-13 22:51:32.174  INFO 4316 --- [http-nio-8080-exec-6] t.l.web.aspect.ControllerAspect          : 请求参数：该方法没有参数
+2021-05-13 22:51:32.174  INFO 4316 --- [http-nio-8080-exec-6] t.l.web.aspect.ControllerAspect          : 响应信息：false
+2021-05-13 22:52:17.434  INFO 4316 --- [nacos-grpc-client-executor-26] com.alibaba.nacos.common.remote.client   : [config-0-42c8b47d-580f-470f-bc14-c5a07af4758e]receive server push request,request=ConfigChangeNotifyRequest,requestId=4
+2021-05-13 22:52:17.434  INFO 4316 --- [nacos-grpc-client-executor-26] c.a.n.client.config.impl.ClientWorker    : [config-0-42c8b47d-580f-470f-bc14-c5a07af4758e] [server-push] config changed. dataId=spring-cloud-legends-nacos-example-dev.properties, group=DEFAULT_GROUP,tenant=null
+2021-05-13 22:52:17.435  INFO 4316 --- [nacos-grpc-client-executor-26] com.alibaba.nacos.common.remote.client   : [config-0-42c8b47d-580f-470f-bc14-c5a07af4758e]ack server push request,request=ConfigChangeNotifyRequest,requestId=4
+2021-05-13 22:52:17.480  INFO 4316 --- [com.alibaba.nacos.client.Worker] c.a.nacos.client.config.impl.CacheData   : [config_rpc_client] [notify-listener] time cost=0ms in ClientWorker, dataId=spring-cloud-legends-nacos-example-dev.properties, group=DEFAULT_GROUP, md5=25a822367cd73c79acc56da3c73fa07e, listener=com.alibaba.cloud.nacos.refresh.NacosContextRefresher$1@25f718ae 
+2021-05-13 22:52:17.503  INFO 4316 --- [nacos.client.cachedata.internal.notifier] c.a.nacos.client.config.impl.CacheData   : [config_rpc_client] [notify-context] dataId=spring-cloud-legends-nacos-example-dev.properties, group=DEFAULT_GROUP, md5=25a822367cd73c79acc56da3c73fa07e
+2021-05-13 22:52:17.809  WARN 4316 --- [nacos.client.cachedata.internal.notifier] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[spring-cloud-legends-nacos-example] & group[DEFAULT_GROUP]
+2021-05-13 22:52:17.838  INFO 4316 --- [nacos.client.cachedata.internal.notifier] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-spring-cloud-legends-nacos-example-dev.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-spring-cloud-legends-nacos-example.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-spring-cloud-legends-nacos-example,DEFAULT_GROUP'}]
+2021-05-13 22:52:17.844  INFO 4316 --- [nacos.client.cachedata.internal.notifier] o.s.boot.SpringApplication               : The following profiles are active: dev
+2021-05-13 22:52:17.867  INFO 4316 --- [nacos.client.cachedata.internal.notifier] o.s.boot.SpringApplication               : Started application in 0.332 seconds (JVM running for 64.225)
+2021-05-13 22:52:18.131  INFO 4316 --- [nacos.client.cachedata.internal.notifier] o.s.c.e.event.RefreshEventListener       : Refresh keys changed: [useLocalCache]
+2021-05-13 22:52:18.132  INFO 4316 --- [nacos.client.cachedata.internal.notifier] c.a.nacos.client.config.impl.CacheData   : [config_rpc_client] [notify-ok] dataId=spring-cloud-legends-nacos-example-dev.properties, group=DEFAULT_GROUP, md5=25a822367cd73c79acc56da3c73fa07e, listener=com.alibaba.cloud.nacos.refresh.NacosContextRefresher$1@25f718ae ,cost=629 millis.
+2021-05-13 22:52:22.302  INFO 4316 --- [http-nio-8080-exec-7] t.l.web.aspect.ControllerAspect          : 《《===== RequestURI：/config/get,方法：get(未定义接口) =====》》
+2021-05-13 22:52:22.302  INFO 4316 --- [http-nio-8080-exec-7] t.l.web.aspect.ControllerAspect          : 请求参数：该方法没有参数
+2021-05-13 22:52:22.302  INFO 4316 --- [http-nio-8080-exec-7] t.l.web.aspect.ControllerAspect          : 响应信息：true
+2021-05-13 22:52:27.962  WARN 4316 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2021-05-13 22:52:27.962  WARN 4316 --- [Thread-15] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2021-05-13 22:52:27.963  WARN 4316 --- [Thread-15] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+2021-05-13 22:52:27.965  WARN 4316 --- [Thread-4] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+2021-05-13 22:52:27.965  INFO 4316 --- [nacos-grpc-client-executor-25] com.alibaba.nacos.common.remote.client   : [1620917480972_127.0.0.1_52898]Ignore complete event,isRunning:false,isAbandon=false
+2021-05-13 22:52:27.965  INFO 4316 --- [nacos-grpc-client-executor-37] com.alibaba.nacos.common.remote.client   : [1620917476690_127.0.0.1_52897]Ignore complete event,isRunning:false,isAbandon=false
+2021-05-13 22:52:27.969  INFO 4316 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [config-0-42c8b47d-580f-470f-bc14-c5a07af4758e]Notify disconnected event to listeners
+2021-05-13 22:52:27.969  INFO 4316 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [444237d0-5206-4369-bcf3-68ada04c79c6]Notify disconnected event to listeners
+2021-05-13 22:52:27.970  INFO 4316 --- [com.alibaba.nacos.client.remote.worker] c.a.n.client.config.impl.ClientWorker    : [config-0-42c8b47d-580f-470f-bc14-c5a07af4758e] DisConnected,clear listen context...
+2021-05-13 22:52:27.970  WARN 4316 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.client.naming          : Grpc connection disconnect
+2021-05-13 22:52:28.025  INFO 4316 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'Nacos-Watch-Task-Scheduler'
+2021-05-13 22:52:28.126 ERROR 4316 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Send request fail, request=SubscribeServiceRequest{headers={app=unknown}, requestId='null'}, retryTimes=0,errorMessage=Client not connected,current status:SHUTDOWN
+2021-05-13 22:52:28.229 ERROR 4316 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Send request fail, request=SubscribeServiceRequest{headers={app=unknown}, requestId='null'}, retryTimes=1,errorMessage=Client not connected,current status:SHUTDOWN
+2021-05-13 22:52:28.329 ERROR 4316 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Send request fail, request=SubscribeServiceRequest{headers={app=unknown}, requestId='null'}, retryTimes=2,errorMessage=Client not connected,current status:SHUTDOWN
+2021-05-13 22:52:28.330 ERROR 4316 --- [SpringContextShutdownHook] c.a.cloud.nacos.discovery.NacosWatch     : namingService unsubscribe failed, properties:NacosDiscoveryProperties{serverAddr='localhost:8848', endpoint='', namespace='', watchDelay=30000, logName='', service='spring-cloud-legends-nacos-example', weight=1.0, clusterName='DEFAULT', group='DEFAULT_GROUP', namingLoadCacheAtStart='false', metadata={preserved.register.source=SPRING_CLOUD}, registerEnabled=true, ip='192.168.1.52', networkInterface='', port=8080, secure=false, accessKey='', secretKey='', heartBeatInterval=null, heartBeatTimeout=null, ipDeleteTimeout=null}
+
+com.alibaba.nacos.api.exception.NacosException: Request nacos server failed: 
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:213)
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.unsubscribe(NamingGrpcClientProxy.java:182)
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.unsubscribe(NamingClientProxyDelegate.java:156)
+	at com.alibaba.nacos.client.naming.NacosNamingService.unsubscribe(NacosNamingService.java:411)
+	at com.alibaba.cloud.nacos.discovery.NacosWatch.stop(NacosWatch.java:166)
+	at com.alibaba.cloud.nacos.discovery.NacosWatch.stop(NacosWatch.java:97)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStop(DefaultLifecycleProcessor.java:234)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$300(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.stop(DefaultLifecycleProcessor.java:373)
+	at org.springframework.context.support.DefaultLifecycleProcessor.stopBeans(DefaultLifecycleProcessor.java:206)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onClose(DefaultLifecycleProcessor.java:129)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1067)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:171)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:991)
+Caused by: com.alibaba.nacos.api.exception.NacosException: Client not connected,current status:SHUTDOWN
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:628)
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:608)
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:203)
+	... 13 common frames omitted
+
+2021-05-13 22:52:28.332  INFO 4316 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'secondaryThreadPool'
+2021-05-13 22:52:28.332  INFO 4316 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2021-05-13 22:52:28.333  INFO 4316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [DEREGISTER-SERVICE] public deregistering service spring-cloud-legends-nacos-example with instance: Instance{instanceId='null', ip='192.168.1.52', port=8080, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2021-05-13 22:52:28.433 ERROR 4316 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Send request fail, request=InstanceRequest{headers={app=unknown}, requestId='null'}, retryTimes=0,errorMessage=Client not connected,current status:SHUTDOWN
+2021-05-13 22:52:28.533 ERROR 4316 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Send request fail, request=InstanceRequest{headers={app=unknown}, requestId='null'}, retryTimes=1,errorMessage=Client not connected,current status:SHUTDOWN
+2021-05-13 22:52:28.635 ERROR 4316 --- [SpringContextShutdownHook] com.alibaba.nacos.common.remote.client   : Send request fail, request=InstanceRequest{headers={app=unknown}, requestId='null'}, retryTimes=2,errorMessage=Client not connected,current status:SHUTDOWN
+2021-05-13 22:52:28.635 ERROR 4316 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : ERR_NACOS_DEREGISTER, de-register failed...NacosRegistration{nacosDiscoveryProperties=NacosDiscoveryProperties{serverAddr='localhost:8848', endpoint='', namespace='', watchDelay=30000, logName='', service='spring-cloud-legends-nacos-example', weight=1.0, clusterName='DEFAULT', group='DEFAULT_GROUP', namingLoadCacheAtStart='false', metadata={preserved.register.source=SPRING_CLOUD}, registerEnabled=true, ip='192.168.1.52', networkInterface='', port=8080, secure=false, accessKey='', secretKey='', heartBeatInterval=null, heartBeatTimeout=null, ipDeleteTimeout=null}},
+
+com.alibaba.nacos.api.exception.NacosException: Request nacos server failed: 
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:213)
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.deregisterService(NamingGrpcClientProxy.java:112)
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.deregisterService(NamingClientProxyDelegate.java:100)
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:174)
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:164)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister(NacosServiceRegistry.java:102)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.deregister(AbstractAutoServiceRegistration.java:249)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.stop(AbstractAutoServiceRegistration.java:264)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.destroy(AbstractAutoServiceRegistration.java:201)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:184)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1152)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1145)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:171)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:991)
+Caused by: com.alibaba.nacos.api.exception.NacosException: Client not connected,current status:SHUTDOWN
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:628)
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:608)
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:203)
+	... 25 common frames omitted
+
+2021-05-13 22:52:28.635  INFO 4316 --- [SpringContextShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2021-05-13 22:52:28.636  INFO 4316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown begin
+2021-05-13 22:52:28.636  INFO 4316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2021-05-13 22:52:28.636  INFO 4316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2021-05-13 22:52:28.636  INFO 4316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown stop
+2021-05-13 22:52:28.636  INFO 4316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown begin
+2021-05-13 22:52:28.636  INFO 4316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown begin
+2021-05-13 22:52:28.938  INFO 4316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown stop
+2021-05-13 22:52:28.938  INFO 4316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.ServerListManager do shutdown begin
+2021-05-13 22:52:28.938  WARN 4316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2021-05-13 22:52:28.938  WARN 4316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2021-05-13 22:52:28.938  INFO 4316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.core.ServerListManager do shutdown stop
+2021-05-13 22:52:28.938  INFO 4316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown begin
+2021-05-13 22:52:28.938  INFO 4316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2021-05-13 22:52:28.939  INFO 4316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2021-05-13 22:52:28.939  WARN 4316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Start destroying NacosRestTemplate
+2021-05-13 22:52:28.939  WARN 4316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : [NamingHttpClientManager] Destruction of the end
+2021-05-13 22:52:28.939  INFO 4316 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialWatcher  : [null] CredentialWatcher is stopped
+2021-05-13 22:52:28.939  INFO 4316 --- [SpringContextShutdownHook] c.a.n.client.identify.CredentialService  : [null] CredentialService is freed
+2021-05-13 22:52:28.939  INFO 4316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown stop
+2021-05-13 22:52:28.940  INFO 4316 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [444237d0-5206-4369-bcf3-68ada04c79c6]Notify disconnected event to listeners
+2021-05-13 22:52:28.940  WARN 4316 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.client.naming          : Grpc connection disconnect
+2021-05-13 22:52:28.940  INFO 4316 --- [SpringContextShutdownHook] com.alibaba.nacos.client.naming          : com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown stop
+2021-05-13 22:52:28.940  INFO 4316 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-13 22:52:28.941  WARN 4316 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Destroy method 'close' on bean with name 'nacosServiceRegistry' threw an exception: java.lang.NullPointerException
+2021-05-13 22:52:28.945  INFO 4316 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'primaryThreadPool'

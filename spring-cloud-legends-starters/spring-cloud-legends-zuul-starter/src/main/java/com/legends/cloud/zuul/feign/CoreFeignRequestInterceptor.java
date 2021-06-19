@@ -1,6 +1,6 @@
-package com.legends.cloud.zuul.feign;
+package top.legendscloud.zuul.feign;
 
-import com.legends.cloud.zuul.core.CoreHeaderInterceptor;
+import top.legendscloud.zuul.core.CoreHeaderInterceptor;
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
 import org.slf4j.Logger;
