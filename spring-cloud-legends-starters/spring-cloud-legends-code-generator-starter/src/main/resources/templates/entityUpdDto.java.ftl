@@ -11,6 +11,7 @@ import java.math.BigDecimal;
 
 <#if swagger2>
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 </#if>
 <#if entityLombokModel>
 import lombok.Data;
@@ -52,6 +53,7 @@ public class ${entityUpdDto} implements Serializable {
 <#list table.fields as field>
     <#if field.propertyName !="createTime" && field.propertyName !="updateTime"
     && field.propertyName !="createUser" && field.propertyName !="updateUser">
+    @ApiModelProperty(value = "${field.comment}")
     private ${field.propertyType} ${field.propertyName};
     </#if>
 </#list>

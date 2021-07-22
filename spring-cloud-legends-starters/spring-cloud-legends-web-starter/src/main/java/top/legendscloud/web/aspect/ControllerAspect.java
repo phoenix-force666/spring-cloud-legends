@@ -78,6 +78,7 @@ public class ControllerAspect {
         if(Objects.nonNull(logsInfoAnnotation)){
             if(!logsInfoAnnotation.isOutPut()) {
                 isLogs=false;
+                return point.proceed(args);
             }
         }
         String logContent = writeLogInfo(parameters, args,request);
@@ -152,6 +153,9 @@ public class ControllerAspect {
             if(value instanceof HttpServletRequest || value instanceof HttpServletResponse){
                 continue;
             }else{
+                if(Objects.isNull(value)){
+                    continue;
+                }
                 buffer.append(JSON.toJSON(value) + ",");
             }
 

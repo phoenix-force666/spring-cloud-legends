@@ -74,8 +74,8 @@ public class EncryptUtil {
 
     public static void main(String[] args) {
         String input = "herion";
-        String result=EncryptUtil.getEncryptedParams(input, "Q0Xv57uP82Dw9oJn3");
-        System.out.println("--------->"+result);
+        String result=EncryptUtil.getEncryptedParams(input, "123456");
+        System.out.println("------rr--->"+result);
     }
 
 }

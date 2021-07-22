@@ -2,10 +2,13 @@ package ${package.Controller};
 import com.google.common.util.concurrent.Callables;
 import org.springframework.validation.annotation.Validated;
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import ReqPage;
-import ComReq;
-import BaseDelDTO;
-import BaseDelsDTO;
+
+import top.legendscloud.common.base.ComReq;
+import top.legendscloud.common.base.ComResp;
+import top.legendscloud.common.base.ReqPage;
+import top.legendscloud.common.base.dto.BaseDelDTO;
+import top.legendscloud.common.base.dto.BaseDelsDTO;
+
 import ${package.Entity}.${entity};
 import ${package.Dto}.${entityDto};
 import ${package.UpdDto}.${entityUpdDto};
@@ -13,7 +16,6 @@ import ${package.AddDto}.${entityAddDto};
 import ${package.Vo}.${vo};
 import ${package.Service}.${table.serviceName};
 import ${package.ConvertMapper}.${entityMapper};
-import ComResp;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;

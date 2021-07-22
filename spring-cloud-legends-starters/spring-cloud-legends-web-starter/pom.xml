@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>top.legendscloud</groupId>
 		<artifactId>spring-cloud-legends-starters</artifactId>
-		<version>2020.0.0-M1</version>
+		<version>2021.0.0-M1</version>
 	</parent>
 
 	<artifactId>spring-cloud-legends-web-starter</artifactId>
 	<packaging>jar</packaging>
 
 	<name>spring-cloud-legends-web-starter</name>
-	<description>基础依赖</description>
+	<description>spring cloud legends</description>
 	
 	<dependencies>
 
@@ -133,6 +133,12 @@
 		<dependency>
 			<groupId>com.alibaba.cloud</groupId>
 			<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+		</dependency>
+
+		<!-- 配置加密-->
+		<dependency>
+			<groupId>com.github.ulisesbocchio</groupId>
+			<artifactId>jasypt-spring-boot-starter</artifactId>
 		</dependency>
 
 	</dependencies>

@@ -1,6 +1,6 @@
 package ${package.Service};
 
-import ReqPage;
+import top.legendscloud.common.base.ReqPage;
 import ${package.Entity}.${entity};
 import ${package.Dto}.${entityDto};
 import ${package.UpdDto}.${entityUpdDto};

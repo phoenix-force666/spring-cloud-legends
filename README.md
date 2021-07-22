@@ -10,6 +10,7 @@ spring cloud legends 一个更易于新手快速搭建微服务治理微服务�
 - 4、knife4j 聚合网关所有转发的微服务API文档
 - 5、报文加解密、加签验签、敏感字段加解密、token验证
 - 6、支持多渠道接入秘钥分配
+- 7、防SQL注入
 ### spring-cloud-legends-web-starter
 #### 内置功能
 - 基础错误码、基础返回码、常用工具类、规范请求响应报文

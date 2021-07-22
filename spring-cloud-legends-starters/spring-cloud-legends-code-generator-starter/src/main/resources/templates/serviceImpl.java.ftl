@@ -1,9 +1,10 @@
 package ${package.ServiceImpl};
 
-CommonEnumCode;
-BizException;
-import ReqPage;
-import PageUtils;
+import top.legendscloud.common.base.ReqPage;
+import top.legendscloud.common.enums.CommonEnumCode;
+import top.legendscloud.common.exception.BizException;
+import top.legendscloud.db.page.PageUtils;
+
 import ${package.Entity}.${entity};
 import ${package.Dto}.${entityDto};
 import ${package.UpdDto}.${entityUpdDto};
