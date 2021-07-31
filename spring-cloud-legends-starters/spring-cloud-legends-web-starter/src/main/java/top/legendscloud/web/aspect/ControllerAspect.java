@@ -146,6 +146,9 @@ public class ControllerAspect {
             String name = paramsArgsName[i].getName();
             //参数值
             Object value = paramsArgsValue[i];
+            if(Objects.isNull(value)){
+                continue;
+            }
             if (isPrimite(value.getClass())) {
                 buffer.append(name + " = ");
             }
